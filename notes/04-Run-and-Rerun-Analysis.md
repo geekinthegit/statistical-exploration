@@ -27,11 +27,11 @@ T: Thats great math thinking
 
 1 = Keeping Everyone Together; 2 = Getting Students to Relate.
 
-| Condition | Run (1 → 2 → 3) | Rerun (1 → 2 → 3) |
-|---|---|---|
-| Baseline | 2 → 1 → 1 | 1 → 1 → 1 |
-| Definitions replaced | 1 → 1 → 1 | 2 → 2 → 2 |
-| Examples replaced | 1 → 1 → 1 | 1 → 1 → 1 |
-| Exclusion rules replaced | 2 → 2 → 2 | 2 → 2 → 2 |
-| Negative control | 1 → 1 → 2 | 1 → 1 → 1 |
-| Names-only | 1 → 1 → 1 | 1 → 1 → 1 |
+| Condition | Run (1 → 2 → 3) | Final label | Rerun (1 → 2 → 3) | Final label |
+|---|---|---|---|---|
+| Baseline | 2 → 1 → 1 | 1 | 1 → 1 → 1 | 1 |
+| Definitions replaced | 1 → 1 → 1 | 1 | 2 → 2 → 2 | 2 |
+| Examples replaced | 1 → 1 → 1 | 1 | 1 → 1 → 1 | 1 |
+| Exclusion rules replaced | 2 → 2 → 2 | 2 | 2 → 2 → 2 | 2 |
+| Negative control | 1 → 1 → 2 | 1 | 1 → 1 → 1 | 1 |
+| Names-only | 1 → 1 → 1 | 1 | 1 → 1 → 1 | 1 |

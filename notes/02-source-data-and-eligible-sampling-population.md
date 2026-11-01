@@ -13,7 +13,9 @@ Source: `train_data_504.xlsx`
 | Excluded: missing utterance text | 274 |
 | Teacher utterances with text | 150,644 |
 | Excluded: development targets | 17 |
-| **Main-study sampling frame** | **150,627** |
+| **Eligible populatione** | **150,627** |
+
+![Eligible population distribution](../images/eligible-population-distribution.png)
 
 ## 2. Development Set D
 
@@ -27,6 +29,8 @@ Source: `train_data_504.xlsx`
 | 5 | Pressing for Accuracy | 3 |
 | 6 | Pressing for Reasoning | 2 |
 | | **Total** | **17** |
+
+![Development set distribution](../images/development-set-distribution.png)
 
 Two utterances per category plus three boundary cases.
 The same set was used for tool validation and the pilot.
@@ -45,8 +49,10 @@ These utterances were excluded as main-study targets but retained as context.
 | 6 | Pressing for Reasoning | 1,757 | 3 | 1.00% |
 | | **Total** | **150,627** | **300** | **100.00%** |
 
-The 300 targets were randomly sampled without replacement.
-None overlapped with development set D.
+![Main sample distribution](../images/main-sample-distribution.png)
+
+![Eligible population vs. main sample](../images/eligible-population-vs-sample.png)
+
 
 All category counts are based on human labels.
 Source counts and sample labels were checked against the existing records.

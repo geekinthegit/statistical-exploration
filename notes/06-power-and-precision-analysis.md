@@ -231,26 +231,9 @@ flowchart TD
     F --> H
     G --> H
 ```
-
 ---
 
-## 8. My Interview Answer
-
-**Why did you choose 300 utterances instead of using power or precision analysis?**
-
-I chose 300 for practical reasons, not from a power or precision analysis.
-
-A power analysis would have needed an expected effect size and an estimate of how much that effect would vary across samples.
-
-A precision analysis would have needed a target confidence interval width and an estimate of how much delta kappa would vary across samples.
-
-I did not have reliable prior information to estimate the variability, and I had not established a justified precision target.
-
-Given my limited time and statistical background, I chose a sample size that I could work with and explain.
-
----
-
-## 9. One-Sentence Memory Aid
+## 8. One-Sentence  Aid
 
 **Power:** How big is the expected effect, and how much might it vary?
 

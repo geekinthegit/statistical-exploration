@@ -1,0 +1,172 @@
+
+# Create a Jupyter Notebook: Token Positions and Placeholder Replacement
+
+## Objective
+
+Create a Jupyter Notebook that visually explains why I used token-matched placeholders instead of deleting coding-manual components in my independent research project.
+
+The notebook should be educational, visually clear, and suitable for viewing on GitHub and Google Colab.
+
+Use English throughout.
+
+## File
+
+`examples/token_position_placeholder_demo.ipynb`
+
+## 1. Introduction
+
+Title:
+
+**Why Replace Instead of Delete? Understanding Token Positions in Prompt Ablation**
+
+Explain briefly:
+
+- LLMs process input as sequences of tokens.
+- Each token occupies a position in the input sequence.
+- Deleting a component changes both the information provided and the positions of subsequent tokens.
+- Replacing the component with a token-matched placeholder preserves the token positions of the remaining content.
+
+## 2. Interactive-Style Visual Explanation
+
+Create three horizontal SVG diagrams using Python and `IPython.display.SVG`.
+
+Use consistent colors, proportions, typography, and spacing.
+
+### Diagram A: Original Prompt
+
+Show three adjacent blocks:
+
+| Component | Token positions |
+|---|---|
+| Names | 1–20 |
+| Definitions | 21–60 |
+| Examples | 61–100 |
+
+Color scheme:
+- Names: slate
+- Definitions: teal
+- Examples: slate
+
+Caption:
+
+"The original prompt contains 100 tokens. Examples begin at position 61."
+
+### Diagram B: Definitions Deleted
+
+Show:
+
+| Component | Token positions |
+|---|---|
+| Names | 1–20 |
+| Examples | 21–60 |
+
+Use the same scale as Diagram A.
+
+Visually indicate that Examples have shifted to earlier positions.
+
+Caption:
+
+"Deleting Definitions removes 40 tokens. Examples now begin at position 21, and the prompt contains only 60 tokens."
+
+### Diagram C: Definitions Replaced
+
+Show:
+
+| Component | Token positions |
+|---|---|
+| Names | 1–20 |
+| Placeholder | 21–60 |
+| Examples | 61–100 |
+
+Color scheme:
+- Names: slate
+- Placeholder: amber
+- Examples: slate
+
+Caption:
+
+"Replacing Definitions with a 40-token placeholder preserves the total token count and the starting position of Examples."
+
+### Visualization requirements
+
+- Display all three diagrams vertically.
+- Maintain the same visual scale across diagrams.
+- Show token-position ranges below each block.
+- Use arrows or annotations to highlight the shift in Diagram B.
+- Clearly distinguish deletion from replacement.
+- Use SVG rather than Matplotlib.
+- Use a reusable Python function to generate the diagrams.
+- No external files or API calls are required.
+
+**Important:** The numbers 20, 40, and 100 are illustrative. They are not actual token counts from my experiment. Include this note prominently.
+
+## 3. What Does Token Matching Control?
+
+Add a short Markdown explanation:
+
+### Deletion
+
+Deleting a component simultaneously changes:
+
+1. The information available to the model.
+2. The total prompt length.
+3. The token positions of subsequent content.
+
+### Replacement
+
+Using a token-matched placeholder preserves:
+
+1. The total token count of the researcher-controlled prompt text.
+2. The token positions of the retained content.
+
+However, replacement still changes the input content and may introduce placeholder-specific effects.
+
+## 4. Connection to My Research
+
+Explain the actual procedure in my coding-manual replacement study.
+
+- The study used the TalkMoves dataset.
+- The model classified 300 sampled teacher utterances.
+- The full coding manual served as the baseline.
+- Definitions, examples, and exclusion rules were replaced separately.
+- Replacement placeholders consisted of `%` symbols separated by spaces.
+- Each replacement instance was locally matched to the original component's token count.
+- Token matching was verified for the experimental inputs.
+- This maintained the positions of retained manual content within the researcher-controlled text.
+
+Do not suggest that the actual prompts contained only the three blocks shown in the diagrams.
+
+## 5. Interpretation and Limitations
+
+Explain:
+
+- Token matching reduces confounding from changes in input length and retained-content positions.
+- It does not establish that placeholders are behaviorally neutral.
+- Related information may remain elsewhere in the coding manual.
+- The study therefore measures sensitivity to the implemented replacement conditions.
+- It does not isolate the independent contribution of each manual component.
+- The verification concerns researcher-controlled prompt text, not the provider's entire internal token sequence.
+
+## 6. Key Takeaway
+
+Display the following statement prominently:
+
+**"Deleting changes both information and structure. Token-matched replacement preserves the positions of retained content while changing the selected component."**
+
+Add a short interview-ready explanation:
+
+"If I simply deleted a component, the remaining text would shift to earlier token positions. So I replaced it with a placeholder of the same token length to keep the prompt length and the positions of the remaining content unchanged."
+
+## 7. Notebook Requirements
+
+- Use Markdown cells for conceptual explanations.
+- Use Python code cells to generate and display SVG diagrams.
+- Keep the notebook self-contained.
+- Use only standard Python libraries and IPython.
+- Ensure all code cells execute from top to bottom.
+- Make the notebook readable in both GitHub and Google Colab.
+- Do not call an LLM API.
+- Do not load or modify actual experimental data.
+- Do not invent study results or actual prompt token counts.
+- Use the illustrative token positions only for visual explanation.
+- Keep explanations concise and technically accurate.
